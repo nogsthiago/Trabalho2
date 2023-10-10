@@ -2,7 +2,7 @@ import hashlib
 import re
 
 class Usuario:
-    def __init__(self, nome, senha, role = "usuario normal"):
+    def __init__(self, nome, senha, role):
         if self.nome_valido(nome):
             self.nome = nome
         else:
@@ -22,11 +22,11 @@ class Usuario:
 
 # Lista de usuários com diferentes níveis de acesso
 usuarios = [
-    Usuario("Pedro", "Para_de_ser_burro"),
-    Usuario("Joao", "cheio_de_ideia_errada"),
+    Usuario("Pedro", "Para_de_ser_burro", "usuario normal"),
+    Usuario("Joao", "cheio_de_ideia_errada", "usuario normal"),
     Usuario("Thiago", "vive_de_forro", "boss"),
     Usuario("Israel", "vive_tranquilo", "administrador"),
-    Usuario("Bruno", "Topus_Embraer")
+    Usuario("Bruno", "Topus_Embraer", "usuario normal")
 ]
     
 # Verificação de login
